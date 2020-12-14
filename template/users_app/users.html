@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Users_App Index Page</title>
+<body>
+	<h1>Welcome to users_app index page</h1>
+	<h4> To check actual users list, please go to /users</h4>
+    
+    {% if users %}
+	<ol>
+		{% for person in users %}
+		<li>User Information</li>
+
+		<ul>
+			<li>First name: {{ person.firstName }}</li>
+			<li>Last Name: {{ person.lastName }}</li>
+			<li>E-Mail Address: {{ person.email }}</li>
+		</ul>
+		{% endfor %}
+	</ol>
+	{% endif %}
+</body>
+</head>
+</html>
